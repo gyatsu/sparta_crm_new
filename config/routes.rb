@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   root 'customers#index'
 
   # post '/comments' => 'comments#create'
-  resources :comments, only: [:create]
-
+  # resources :comments, only: [:create]
+  resources :comments, only: [:create, :destroy]
   # get 'customers/index'
 
   # get 'customers/new'
