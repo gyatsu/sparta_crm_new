@@ -41,8 +41,9 @@ class CustomersController < ApplicationController
 
   def destroy
     @customer = Customer.find(params[:id])
+    customer_id = @comment.customer_id
     @customer.destroy
-    redirect_to customers_url
+    redirect_to customers_url(customer_id)
   end
 
 
