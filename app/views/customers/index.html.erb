@@ -31,6 +31,15 @@
           </div>
         </div>
       </div>
+        <div class="col-sm-2 col-xs-12">
+          <div class="form-group">
+            <%= f.label :comments_body, 'コメント' %>
+            <%= f.search_field :comments_body_cont, class: "form-control input-sm" %>
+          </div>
+        </div>
+
+
+
       <div class="row">
         <div class="col-xs-12 text-center">
           <%= f.submit "検索", class: "btn btn-default" %>
