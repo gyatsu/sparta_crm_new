@@ -37,7 +37,9 @@
         <div class="media-body">
           <p><%= simple_format(comment.body) %></p>
           <p class="text-muted">
-            投稿日時：<%= comment.created_at.strftime('%Y/%m/%d %H:%M') %>
+          by <%= comment.user.family_name %> <%= comment.user.given_name %></p>
+          <p class="text-muted">
+          投稿日時：<%= comment.created_at.strftime('%Y/%m/%d %H:%M') %>
             <%= link_to "削除する", comment_path(comment), method: :delete %>
           </p>
         </div>
